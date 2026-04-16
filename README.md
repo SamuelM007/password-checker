@@ -34,8 +34,10 @@ A partner exercise to practice using JUnit tests.
 ## Setting Up Tests
 1. Open `PasswordCheckerTest.java`
 1. Look at the dummy test inside it. This test is just used to validate your VS Code setup, please delete it once you write your actual tests.
-1. In VS Code, click on the test beaker on the left bar
-1. Use the triangle to run the dummy test. You should see it pass with a green checkmark
+1. Run the dummy test using the below command:
+```
+javac -cp lib/junit-platform-console-standalone-1.11.4.jar src/*.java && java -jar lib/junit-platform-console-standalone-1.11.4.jar --class-path src --scan-class-path
+```
 
 
 
