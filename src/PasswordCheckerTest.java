@@ -72,6 +72,17 @@ public class PasswordCheckerTest {
     assertFalse(actual);
   }
 
+  // Test isAlphanumeric()
+  @Test
+  public void isAlphanumeric_Numbers_Only() {
+    // Arrange 
+    PasswordChecker checker = new PasswordChecker(6,12);
+    // Act
+    boolean actual = checker.isAlphanumeric("123456789");
+    // Assert
+    assertTrue(actual);
+  }
+
   // Test isBannedPassword()
   @Test
   public void isBannedPassword_Password_True() {
@@ -82,6 +93,8 @@ public class PasswordCheckerTest {
     // Assert
     assertTrue(actual);
   }
+
+  // Test isBannedPassword()
 @Test
   public void isBannedPassword_Password_False() {
     // Arrange
