@@ -39,6 +39,16 @@ public class PasswordCheckerTest {
     assertEquals("long",actual);
   }
 
+  @Test
+  public void describePasswordLength_PasswordIs13Long() {
+    // Arrange 
+    PasswordChecker counter = new PasswordChecker(6,12);
+    // Act
+    String actual = counter.describePasswordLength("1234567890abc");
+    // Assert
+    assertEquals("long",actual);
+  }
+
 
   // Test isAlphanumeric()
   @Test
@@ -79,7 +89,7 @@ public class PasswordCheckerTest {
     // Act
     boolean actual = banner.isBannedPassword("micCheckOneTwo");
     // Assert
-    assertTrue(actual);
+    assertFalse(actual);
   }
 
 
